@@ -33,9 +33,11 @@ def move_dir(volume_dir_path):
 # get list of volumes in directory
 volume_dir_path_list = sorted([x for x in config.step1_dir_path.iterdir() if x.is_dir()])
 
-# grab current volume, which is currently the first volume
-# volume_dir_path = volume_dir_path_list[0]
+# grab 1 volume, which is the first 1 and move it
+volume_dir_path = volume_dir_path_list[0]
+move_dir(volume_dir_path)
 
-for volume_dir_path in volume_dir_path_list:
-    print(f'{volume_dir_path.name}')
-    move_dir(volume_dir_path)
+# for batch processing
+# for volume_dir_path in volume_dir_path_list:
+#     print(f'{volume_dir_path.name}')
+#     move_dir(volume_dir_path)
