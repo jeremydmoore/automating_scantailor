@@ -1,4 +1,5 @@
 # config.py
+from pathlib import Path
 
 root_dir_path = Path('/Users/dlisla/shared_with_docker')
 
